@@ -1,0 +1,32 @@
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[user]
+	name = loevliedenny@gmail.com
+	email = 59749099+loevlie@users.noreply.github.com
+[core]
+	editor = mate -w
+[diff]
+	tool = p4merge
+[difftool "p4merge"]
+	path = /Applications/p4merge.app/Contents/MacOS/p4merge
+[difftool]
+	prompt = false
+[merge]
+	tool = p4merge
+[mergetool "p4merge"]
+	path = /Applications/p4merge.app/Contents/MacOS/p4merge
+[mergetool]
+	prompt = false
+[alias]
+	hist = log --oneline --graph --decorate --all
+	lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate=full
+	l = log --oneline --graph --decorate
+	amend = commit --amend --no-edit
+	subupdate = submodule update --init --recursive
+[push]
+	default = simple
+[github]
+	user = loevlie
