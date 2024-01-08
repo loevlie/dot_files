@@ -222,7 +222,6 @@ extract () {
   fi
 }
 
-export OPENAI_API_KEY="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"
 alias finder='nautilus .'
 alias gs='git status'
 alias gp='git pull'
